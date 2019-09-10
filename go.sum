@@ -1,0 +1,4 @@
+github.com/8byt/gox v0.0.0-20181230170741-86fb3283233c h1:3G2dOQjF0SNrth+KQry7TsWt6l2c6Aj2pJigFVlBE5o=
+github.com/8byt/gox v0.0.0-20181230170741-86fb3283233c/go.mod h1:aHdLN1gB3rYw8lojf2WQq1500NRDgTyTmpbJU7H6iF4=
+github.com/gopherjs/vecty v0.0.0-20190701174234-2b6fc20f8913 h1:h5R2K5Wqn5av3i4xHkyVgI2qCSbpJHAqqAkKpMPh0eE=
+github.com/gopherjs/vecty v0.0.0-20190701174234-2b6fc20f8913/go.mod h1:Yd9AOfl6lN1BWnVnvaSBwKiTCAcnlIGGvdsODOOZ9RY=

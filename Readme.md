@@ -17,3 +17,7 @@ wasmserve
 ```
 
 And navigate to http://localhost:8080/
+
+## Preview 
+
+![Screenshot](./screenshot.png)

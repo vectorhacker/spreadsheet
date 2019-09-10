@@ -41,6 +41,8 @@ func (s *Spreadsheet) update(action interface{}) {
 		s.Active = a.Position
 	case *actions.UpdateValue:
 		s.Cells[a.Position] = a.Value
+	case *actions.EndEdit:
+		s.Active = spreadsheet.Position{}
 	}
 }
 
@@ -69,6 +71,7 @@ func (s *Spreadsheet) renderEditor(position spreadsheet.Position, value string) 
 				vecty.Style("width", "100%"),
 				vecty.Style("height", "100%"),
 				prop.Value(value),
+				prop.Autofocus(true),
 				prop.Type(prop.TypeText),
 				event.Input(func(e *vecty.Event) {
 					value := e.Target.Get("value").String()
@@ -77,6 +80,10 @@ func (s *Spreadsheet) renderEditor(position spreadsheet.Position, value string) 
 						Position: position,
 						Value:    value,
 					})
+				}),
+
+				event.DoubleClick(func(e *vecty.Event) {
+					dispatcher.Dispatch(&actions.EndEdit{})
 				}),
 			),
 		),

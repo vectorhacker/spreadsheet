@@ -12,3 +12,6 @@ type UpdateValue struct {
 	Position spreadsheet.Position
 	Value    string
 }
+
+type EndEdit struct {
+}
